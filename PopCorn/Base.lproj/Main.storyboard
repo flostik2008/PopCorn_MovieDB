@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Now Playing View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NowPlayingViewController" customModule="PopCorn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Au7-jD-Twz" userLabel="NowPlayingCollectionView">
+                                <rect key="frame" x="10" y="94" width="394" height="768"/>
+                                <color key="backgroundColor" red="0.15827396369999999" green="0.15827396369999999" blue="0.15827396369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OlA-ns-M9Y">
+                                    <size key="itemSize" width="186" height="314"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="MtA-Da-h8J" customClass="CollectionViewCell" customModule="PopCorn" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="294"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KPP-KP-rbp">
+                                            <rect key="frame" x="0.0" y="0.0" width="166" height="294"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iVh-gB-a0v">
+                                                    <rect key="frame" x="0.0" y="0.0" width="166" height="264"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name Placeholder" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Owk-cb-4Ui">
+                                                    <rect key="frame" x="10" y="269" width="146" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Owk-cb-4Ui" secondAttribute="bottom" constant="5" id="BlK-U6-8r3"/>
+                                                <constraint firstAttribute="trailing" secondItem="iVh-gB-a0v" secondAttribute="trailing" id="cp6-2c-n5a"/>
+                                                <constraint firstItem="Owk-cb-4Ui" firstAttribute="top" secondItem="iVh-gB-a0v" secondAttribute="bottom" constant="5" id="fsk-6z-Hiq"/>
+                                                <constraint firstItem="Owk-cb-4Ui" firstAttribute="leading" secondItem="KPP-KP-rbp" secondAttribute="leading" constant="10" id="mCX-Ze-j8W"/>
+                                                <constraint firstItem="iVh-gB-a0v" firstAttribute="top" secondItem="KPP-KP-rbp" secondAttribute="top" id="rMd-xZ-aim"/>
+                                                <constraint firstAttribute="trailing" secondItem="Owk-cb-4Ui" secondAttribute="trailing" constant="10" id="txh-UE-nvN"/>
+                                                <constraint firstItem="iVh-gB-a0v" firstAttribute="leading" secondItem="KPP-KP-rbp" secondAttribute="leading" id="xb7-ia-nxL"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="166" height="294"/>
+                                        <connections>
+                                            <outlet property="movieTitleLabel" destination="Owk-cb-4Ui" id="xS1-1t-2hS"/>
+                                            <outlet property="posterImageView" destination="iVh-gB-a0v" id="B1w-jx-Fw8"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Playing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WS1-ym-4rg">
+                                <rect key="frame" x="20" y="52" width="166" height="34"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1582739637305699" green="0.1582739637305699" blue="0.1582739637305699" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WS1-ym-4rg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5e8-7v-TlL"/>
+                            <constraint firstItem="Au7-jD-Twz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-10" id="Nej-mf-VBk"/>
+                            <constraint firstItem="Au7-jD-Twz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="T5V-tB-TlX"/>
+                            <constraint firstItem="Au7-jD-Twz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cTK-gt-fC3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WS1-ym-4rg" secondAttribute="trailing" constant="228" id="fih-8I-TRn"/>
+                            <constraint firstItem="Au7-jD-Twz" firstAttribute="top" secondItem="WS1-ym-4rg" secondAttribute="bottom" constant="8" id="lHG-QE-Qt0"/>
+                            <constraint firstItem="WS1-ym-4rg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="tOF-Ao-bK0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="nowPlayingCollectionView" destination="Au7-jD-Twz" id="fB6-Gi-voG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
