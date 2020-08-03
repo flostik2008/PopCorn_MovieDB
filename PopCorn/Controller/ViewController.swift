@@ -48,14 +48,14 @@ class NowPlayingViewController : UIViewController, MovieDBServiceDelegate {
                     
         self.networkService.getNowPlaying()
     }
-    
+
+    // MARK: MovieDBServiceDelegate methods:
     func didFinishGettingNowPlaying (results : [MovieModel]?) {
         if let results = results {
             self.movies = results
             self.nowPlayingCollectionView.reloadData()
         }
     }
-
 }
 
 

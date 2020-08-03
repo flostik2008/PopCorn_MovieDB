@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5C3141EE244D29F800B76145 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3141ED244D29F800B76145 /* CollectionViewCell.swift */; };
+		5C51418024D7B59000F0986A /* ReadMe.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5C51417F24D7B59000F0986A /* ReadMe.rtf */; };
 		5C777CE72448D0870030CEC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C777CE62448D0870030CEC9 /* AppDelegate.swift */; };
 		5C777CE92448D0870030CEC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C777CE82448D0870030CEC9 /* SceneDelegate.swift */; };
 		5C777CEB2448D0870030CEC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C777CEA2448D0870030CEC9 /* ViewController.swift */; };
 		5C777CEE2448D0870030CEC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C777CEC2448D0870030CEC9 /* Main.storyboard */; };
-		5C777CF12448D0870030CEC9 /* PopCorn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C777CEF2448D0870030CEC9 /* PopCorn.xcdatamodeld */; };
 		5C777CF32448D0890030CEC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C777CF22448D0890030CEC9 /* Assets.xcassets */; };
 		5C777CF62448D0890030CEC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C777CF42448D0890030CEC9 /* LaunchScreen.storyboard */; };
 		5C777CFE244BE52A0030CEC9 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C777CFD244BE5290030CEC9 /* MovieModel.swift */; };
@@ -22,12 +22,12 @@
 
 /* Begin PBXFileReference section */
 		5C3141ED244D29F800B76145 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		5C51417F24D7B59000F0986A /* ReadMe.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ReadMe.rtf; sourceTree = "<group>"; };
 		5C777CE32448D0870030CEC9 /* PopCorn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopCorn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C777CE62448D0870030CEC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C777CE82448D0870030CEC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5C777CEA2448D0870030CEC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5C777CED2448D0870030CEC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5C777CF02448D0870030CEC9 /* PopCorn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PopCorn.xcdatamodel; sourceTree = "<group>"; };
 		5C777CF22448D0890030CEC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C777CF52448D0890030CEC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C777CF72448D0890030CEC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,9 +50,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C3141F0244D60D000B76145 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5C777CEA2448D0870030CEC9 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5C3141F1244D60E200B76145 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5C3141ED244D29F800B76145 /* CollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5C3141F2244D60F600B76145 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C777CFD244BE5290030CEC9 /* MovieModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5C3141F3244D613400B76145 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				5C777CFF244BF6890030CEC9 /* MovieDBService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		5C3141F4244D615800B76145 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5C777CF72448D0890030CEC9 /* Info.plist */,
+				5C777CEC2448D0870030CEC9 /* Main.storyboard */,
+				5C777CF22448D0890030CEC9 /* Assets.xcassets */,
+				5C777CF42448D0890030CEC9 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5C3141F5244D623F00B76145 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5C777CE62448D0870030CEC9 /* AppDelegate.swift */,
+				5C777CE82448D0870030CEC9 /* SceneDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		5C777CDA2448D0860030CEC9 = {
 			isa = PBXGroup;
 			children = (
+				5C51417F24D7B59000F0986A /* ReadMe.rtf */,
 				5C777CE52448D0870030CEC9 /* PopCorn */,
 				5C777CE42448D0870030CEC9 /* Products */,
 				7609ED41BE8DE3CEFF43E0F7 /* Pods */,
@@ -71,17 +124,12 @@
 		5C777CE52448D0870030CEC9 /* PopCorn */ = {
 			isa = PBXGroup;
 			children = (
-				5C777CE62448D0870030CEC9 /* AppDelegate.swift */,
-				5C777CE82448D0870030CEC9 /* SceneDelegate.swift */,
-				5C777CEA2448D0870030CEC9 /* ViewController.swift */,
-				5C3141ED244D29F800B76145 /* CollectionViewCell.swift */,
-				5C777CFD244BE5290030CEC9 /* MovieModel.swift */,
-				5C777CFF244BF6890030CEC9 /* MovieDBService.swift */,
-				5C777CEC2448D0870030CEC9 /* Main.storyboard */,
-				5C777CF22448D0890030CEC9 /* Assets.xcassets */,
-				5C777CF42448D0890030CEC9 /* LaunchScreen.storyboard */,
-				5C777CF72448D0890030CEC9 /* Info.plist */,
-				5C777CEF2448D0870030CEC9 /* PopCorn.xcdatamodeld */,
+				5C3141F5244D623F00B76145 /* Main */,
+				5C3141F0244D60D000B76145 /* Controller */,
+				5C3141F1244D60E200B76145 /* View */,
+				5C3141F2244D60F600B76145 /* Model */,
+				5C3141F3244D613400B76145 /* Networking */,
+				5C3141F4244D615800B76145 /* Resources */,
 			);
 			path = PopCorn;
 			sourceTree = "<group>";
@@ -165,6 +213,7 @@
 			files = (
 				5C777CF62448D0890030CEC9 /* LaunchScreen.storyboard in Resources */,
 				5C777CF32448D0890030CEC9 /* Assets.xcassets in Resources */,
+				5C51418024D7B59000F0986A /* ReadMe.rtf in Resources */,
 				5C777CEE2448D0870030CEC9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,7 +268,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C777CEB2448D0870030CEC9 /* ViewController.swift in Sources */,
-				5C777CF12448D0870030CEC9 /* PopCorn.xcdatamodeld in Sources */,
 				5C777CFE244BE52A0030CEC9 /* MovieModel.swift in Sources */,
 				5C777CE72448D0870030CEC9 /* AppDelegate.swift in Sources */,
 				5C777D00244BF6890030CEC9 /* MovieDBService.swift in Sources */,
@@ -422,19 +470,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		5C777CEF2448D0870030CEC9 /* PopCorn.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				5C777CF02448D0870030CEC9 /* PopCorn.xcdatamodel */,
-			);
-			currentVersion = 5C777CF02448D0870030CEC9 /* PopCorn.xcdatamodel */;
-			path = PopCorn.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 5C777CDB2448D0860030CEC9 /* Project object */;
 }

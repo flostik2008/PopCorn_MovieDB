@@ -26,7 +26,7 @@ class MovieDBService {
     /// Gets movies that are playing now
     func getNowPlaying(){
         
-        AF.request(nowPlayingURL+apiKey).responseJSON { (response) in
+        AF.request(nowPlayingURL+apiKey).responseJSON { (response) in    //AF is used instead of JSONDecoder
             
             switch response.result {
             case let .success(value):
